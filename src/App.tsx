@@ -97,7 +97,7 @@ function App() {
           </div>
 
           <div>
-            Balance: {isSourceBalanceLoading || isSourceBalanceError ? '...' : formatEther(sourceBalance as any)} CHOM
+            Balance: {isSourceBalanceLoading || isSourceBalanceError ? '...' : formatEther(sourceBalance || 0 as any)} CHOM
           </div>
         </div>
 
@@ -120,7 +120,7 @@ function App() {
           </div>
 
           <div>
-          Balance: {isDestBalanceLoading || isDestBalanceError ? '...' : formatEther(destBalance as any)} CHOM
+          Balance: {isDestBalanceLoading || isDestBalanceError ? '...' : formatEther(destBalance || 0 as any)} CHOM
           </div>
         </div>
       </div>
