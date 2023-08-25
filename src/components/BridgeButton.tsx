@@ -1,4 +1,4 @@
-import { Button, Modal, Steps } from "antd"
+import { Button, Modal, Steps, message } from "antd"
 import React, { useEffect, useState } from "react"
 
 import {
@@ -45,7 +45,6 @@ bcs.registerStructType("UnlockMessage", {
 
 export default function BridgeButton({ amount }: { amount: number }) {
   const { chain } = useNetwork();
-  const [ message ] = useMessage();
 
   const BRIDGE_ADDRESS = TOKEN_ADDRESSES[chain?.id || 0];
   const TOKEN_ADDRESS = BRIDGE_ADDRESS;
